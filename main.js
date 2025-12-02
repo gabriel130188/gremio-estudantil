@@ -1,71 +1,31 @@
-function TOCHSOM (10 ELEMENTOAUDIO){
-CONST ELEMENTO = DOCUMENT.QUERYSCLecter (10Elementoaudio);
-IF (CLEMENTO & & ELEMENTO.LOCALNAMG = = =' AUDIO'){
-ELEMENTO. PLAY();
-
+functiontocaSom(10ElementoAudio) {
+    const elemento = document.querySelector(10ElementoAudio);
+    if (elemento && elemento.localName === 'audio') {
+        elemento.play();
+    } else {
+        console.log("Elemento não encontrado ou inválido");
+    }
 }
+const listaDeTeclas = document.querySelectorAll('.tecla');
+
+
+
+
+for (let contador = 0; contador < listaDeTeclas.length; contador++) {
+    const tecla = listaDeTeclas[contador];
+    const efeito = tecla.classList[1];
+    const idAudio = `#som_${efeito}`;
+    tecla.onclick = function () {
+        tocaSom(idAudio);
+    }
+
+    tecla.onkeydown = function (evento) {
+        if (evento.code === 'Space' || evento.code === 'Enter') {
+            tecla.classList.add('ativa');
+        }
+    }
+
+    tecla.onkeyup = function () {
+        tecla.classList.remove('ativa');
+    }
 }
-
-
-
-
-S
-CONSOLE LOG (" ELEMENID NAD VAD LENCQUEDADO INVALIOD"),
-
-του πειστος
-
-}
-
-CONST LISTA DETECLAS = DOCUMENT, QUERY SELECTORAL (TES),
-
-
-
-
-
-
-
-
-
-
-
-
-
-FOR (LET COVERDOS=0; CONGOve (USADETEOUS, LENGTH){
-
-CONST TELLA = LISTADETECLIS [CONUDE],
-
-CONST EFEITO TELLA.CASSLIST[S],"
-
-CONST IDAVDIO = '#Som_${crειτο}';
-
-TECLA ONCLICK=FUNCTION() {
-
-TOCASOM (ID AUDIO);
-
-TELLA ON KEY DOWN = FUNCTION (EVENTO){
-
-
-
-
-
-IF (CVENTO.CODE= = = 'SPACE')
-
-TECLA CLASSLIST. ADD ('ATIVA');
-
-
-
-}
-
-}
-
-TELLA ONKEY DOWN = JUNCTION (CUENTO) [
-
-IF (CUENTO. CODE === 'ENTER')
-
-
-TECLA CLASSLIST. ADD ('ATIVA'),
-
-
-
-
-    
